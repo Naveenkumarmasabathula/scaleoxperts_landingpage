@@ -26,6 +26,11 @@ const Testimonials: React.FC = () => {
       src: '/review4.webp',
       alt: 'Customer WhatsApp Review 4',
     },
+    {
+      id: 5,
+      src: '/review5.webp',
+      alt: 'Customer WhatsApp Review 5',
+    },
   ];
 
   const handleWhatsAppClick = () => {

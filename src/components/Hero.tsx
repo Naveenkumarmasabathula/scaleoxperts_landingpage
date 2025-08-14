@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Clock, ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import TrustedBySection from './TrustedBy';
 import Image from 'next/image';
 
@@ -38,10 +38,12 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
+      {/* Top Hero Banner */}
       <div className="bg-[url('/herobg.webp')] bg-cover bg-center bg-orange-gradient text-white py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 leading-tight">
-            Uncover exactly what&apos;s holding your business back online with our Digital marketing audit worth ₹7,999 for <span className="text-yellow-400">Free</span>
+            Uncover exactly what&apos;s holding your business back online with our Digital marketing audit worth ₹7,999 for{' '}
+            <span className="text-yellow-400">Free</span>
           </h1>
           <button
             onClick={handleWhatsAppClick}
@@ -52,6 +54,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Countdown Timer Section */}
       <div className="bg-[#fffaf4] text-black py-4 px-4 sm:px-6 border-b-2 border-orange-200">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
@@ -60,20 +63,30 @@ const Hero: React.FC = () => {
               Claim within 4 hours for Bonus Business growth strategy audit and competitor analysis
             </span>
           </div>
+
+          {/* Timer Boxes */}
           <div className="flex justify-center gap-4 mb-4">
             <div className="bg-orange-100 px-3 py-2 rounded-lg">
-              <div className="text-2xl font-bold text-orange-600">{timeLeft.hours.toString().padStart(2, '0')}</div>
+              <div className="text-2xl font-bold text-orange-600">
+                {timeLeft.hours.toString().padStart(2, '0')}
+              </div>
               <div className="text-xs text-gray-600">Hours</div>
             </div>
             <div className="bg-orange-100 px-3 py-2 rounded-lg">
-              <div className="text-2xl font-bold text-orange-600">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+              <div className="text-2xl font-bold text-orange-600">
+                {timeLeft.minutes.toString().padStart(2, '0')}
+              </div>
               <div className="text-xs text-gray-600">Minutes</div>
             </div>
             <div className="bg-orange-100 px-3 py-2 rounded-lg">
-              <div className="text-2xl font-bold text-orange-600">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+              <div className="text-2xl font-bold text-orange-600">
+                {timeLeft.seconds.toString().padStart(2, '0')}
+              </div>
               <div className="text-xs text-gray-600">Seconds</div>
             </div>
           </div>
+
+          {/* CTA Button */}
           <button
             onClick={handleWhatsAppClick}
             className="bg-gray-800 text-white font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -84,33 +97,43 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Main Hero Section */}
       <div className="bg-[url('/herobg.webp')] bg-cover bg-center relative">
         <div className="absolute inset-0 bg-black opacity-10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
               GENERATE LEADS AND SALES FOR YOUR BUSINESS WITH COMPREHENSIVE <br />
-              <span className="text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase"> DIGITAL MARKETING SERVICES</span>
+              <span className="text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase">
+                DIGITAL MARKETING SERVICES
+              </span>
             </h2>
 
-            <div className="aspect-video flex items-center justify-center">
-              <Image
-                src="/Hero.webp"
-                alt="Our Service"
-                width={650}
-                height={450}
-                className="rounded-lg object-contain"
-              />
+            {/* Hero Image - SIGNIFICANTLY ENLARGED TO 1600px */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-full max-w-[1600px] relative">
+                <Image
+                  src="/Hero.webp"
+                  alt="Our Service"
+                  width={1600}
+                  height={1600}
+                  className="w-full h-auto object-contain rounded-2xl"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1600px"
+                />
+              </div>
             </div>
 
+            {/* CTA Button */}
             <button
               onClick={handleWhatsAppClick}
-              className="bg-white text-black font-bold py-4 px-8 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-xl mb-8"
+              className="bg-white text-black font-bold py-4 px-6 sm:px-8 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               <span className="line-through text-gray-600 mr-2">₹10,999</span>
-              <span className='text-orange-500'>FREE</span>
+              <span className="text-orange-500 text-lg">FREE</span>
             </button>
 
+            {/* Trusted By Section */}
             <TrustedBySection />
           </div>
         </div>
