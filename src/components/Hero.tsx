@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main Hero Section */}
-      <div className="bg-[url('/herobg.webp')] bg-cover bg-center bg-orange-gradient relative">
+      <div className="bg-[url('/herobg.webp')] bg-cover bg-center  relative">
         <div className="absolute inset-0 bg-black opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
