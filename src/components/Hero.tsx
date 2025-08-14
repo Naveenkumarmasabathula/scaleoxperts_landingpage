@@ -38,8 +38,7 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Orange Gradient Banner */}
-      <div className="bg-[url('/herobg.webp')] bg-cover bg-center bg-orange-gradient  text-white py-4 px-4 sm:px-6">
+      <div className="bg-[url('/herobg.webp')] bg-cover bg-center bg-orange-gradient text-white py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 leading-tight">
             Uncover exactly what&apos;s holding your business back online with our Digital marketing audit worth ₹7,999 for <span className="text-yellow-400">Free</span>
@@ -53,7 +52,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Countdown Banner */}
       <div className="bg-[#fffaf4] text-black py-4 px-4 sm:px-6 border-b-2 border-orange-200">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
@@ -86,35 +84,23 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Hero Section */}
-      <div className="bg-[url('/herobg.webp')] bg-cover bg-center  relative">
+      <div className="bg-[url('/herobg.webp')] bg-cover bg-center relative">
         <div className="absolute inset-0 bg-black opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Generate leads and sales for your business with comprehensive <br />
-              <span className="text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"> Digital Marketing Services</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase">
+              GENERATE LEADS AND SALES FOR YOUR BUSINESS WITH COMPREHENSIVE <br />
+              <span className="text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase"> DIGITAL MARKETING SERVICES</span>
             </h2>
 
-            <button
-              onClick={handleWhatsAppClick}
-              className="bg-white text-orange-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl  inline-flex items-center gap-2"
-            >
-              Get free audit
-              <ArrowRight className="w-5 h-5" />
-            </button>
-
-
-            {/* Laptop Mockup */}
-
             <div className="aspect-video flex items-center justify-center">
-                  <Image
-                    src="/Hero.webp" // replace with your image path
-                    alt="Our Service"
-                    width={650} // adjust for your image size
-                    height={450}
-                    className="rounded-lg object-contain  "
-                  />
+              <Image
+                src="/Hero.webp"
+                alt="Our Service"
+                width={650}
+                height={450}
+                className="rounded-lg object-contain"
+              />
             </div>
 
             <button
@@ -122,12 +108,10 @@ const Hero: React.FC = () => {
               className="bg-white text-black font-bold py-4 px-8 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-xl mb-8"
             >
               <span className="line-through text-gray-600 mr-2">₹10,999</span>
-              <span className='text-orange-500' >FREE</span>
+              <span className='text-orange-500'>FREE</span>
             </button>
 
-            {/* Trusted By Section */}
             <TrustedBySection />
-
           </div>
         </div>
       </div>
